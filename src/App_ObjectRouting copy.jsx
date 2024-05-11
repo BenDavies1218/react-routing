@@ -4,20 +4,27 @@ import Contact from "./Pages/Contact";
 import PageNotFound from "./Pages/PageNotFound";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import BaseLayout from "./Pages/_baseLayout";
 
 const someRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <BaseLayout />,
     errorElement: <PageNotFound />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 
