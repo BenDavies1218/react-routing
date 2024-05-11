@@ -2,6 +2,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import PageNotFound from "./Pages/PageNotFound";
+import "./styles/index.css";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import BaseLayout from "./Pages/_baseLayout";
